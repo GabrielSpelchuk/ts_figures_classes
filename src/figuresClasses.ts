@@ -58,16 +58,16 @@ export class Rectangle implements Figure {
 
   constructor(
     public color: Color,
-    public a: number,
-    public b: number,
+    public height: number,
+    public width: number,
   ) {
-    if (a <= 0 || b <= 0) {
-      throw new Error('Sides need to be greated than 0');
+    if (height <= 0 || width <= 0) {
+      throw new Error('Sides need to be greater than 0');
     }
   }
 
   getArea(): number {
-    return Math.floor(this.a * this.b * 100) / 100;
+    return Math.floor(this.height * this.width * 100) / 100;
   }
 }
 
